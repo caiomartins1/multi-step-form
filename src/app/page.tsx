@@ -1,65 +1,48 @@
+import Input from '@/components/inputs/input';
+
 export default function Home() {
   return (
-    <div className="w-screen h-screen text-marine-blue bg-light-gray flex flex-col">
-      <section className="bg-aside-mobile object-contain md:bg-aside-desktop h-48 bg-no-repeat">
-        <div className="flex text-white flex-row pt-8 text-sm justify-center space-x-4">
-          <div className="px-3 py-1 rounded-full border hover:bg-light-blue hover:text-black transition border-white">
-            1
+    <div className="bg-light-gray h-screen flex sm:items-center sm:px-4">
+      <div className="bg-light-gray mx-auto w-full max-w-[375px] sm:max-w-6xl sm:h-[35rem] sm:rounded-xl overflow-hidden">
+        <div className="flex flex-col sm:flex-row h-full">
+          <div
+            className="
+              flex pt-10 justify-center gap-4 h-40 object-contain bg-aside-mobile text-white-custom
+              sm:h-full sm:flex-col sm:w-64 sm:space-y-4 sm:justify-start sm:px-8 sm:bg-aside-desktop
+            "
+          >
+            <div className="hover:bg-light-blue cursor-pointer transition hover:text-marine-blue flex items-center justify-center border border-white-custom w-10 h-10 rounded-full">
+              1
+            </div>
+            <div className="hover:bg-light-blue cursor-pointer transition hover:text-marine-blue flex items-center justify-center border border-white-custom w-10 h-10 rounded-full">
+              2
+            </div>
+            <div className="hover:bg-light-blue cursor-pointer transition hover:text-marine-blue flex items-center justify-center border border-white-custom w-10 h-10 rounded-full">
+              3
+            </div>
+            <div className="hover:bg-light-blue cursor-pointer transition hover:text-marine-blue flex items-center justify-center border border-white-custom w-10 h-10 rounded-full">
+              4
+            </div>
           </div>
-          <div className="px-3 py-1 rounded-full border hover:bg-light-blue hover:text-marine-blue transition border-white">
-            2
-          </div>
-          <div className="px-3 py-1 rounded-full border hover:bg-light-blue hover:text-marine-blue transition border-white">
-            3
-          </div>
-          <div className="px-3 py-1 rounded-full border hover:bg-light-blue hover:text-marine-blue transition border-white">
-            4
-          </div>
-        </div>
-      </section>
+          <div
+            className="
+              sm:pt-10 sm:mt-0
+              -mt-14 mx-4 rounded-xl bg-white text-marine-blue py-6 px-6
+            "
+          >
+            <div className="space-y-2">
+              <h1 className="text-2xl font-bold">Personal Info</h1>
+              <p className="text-cool-gray leading-relaxed">
+                Please provide your name, email address, and phone number.
+              </p>
+            </div>
 
-      <div className="flex-1 flex flex-col justify-between">
-        <div className="p-4">
-          <div className="bg-white py-8 px-6 -mt-[6.8rem] rounded-md">
-            <h1 className="text-2xl font-bold">Personal Info</h1>
-            <h3 className="text-cool-gray mt-2">
-              Please provide your name, email address, and phone number.
-            </h3>
-
-            <form className="mt-2 w-full space-y-2">
-              <fieldset className="flex flex-col space-y-1">
-                <label className="text-sm text-marine-blue">Name</label>
-                <input
-                  className="border px-3 py-1 rounded-sm placeholder:text-light-gray text-cool-gray"
-                  placeholder="e.g. Stephen King"
-                />
-              </fieldset>
-
-              <fieldset className="flex flex-col space-y-1">
-                <label className="text-sm text-marine-blue">
-                  Email Address
-                </label>
-                <input
-                  className="border px-3 py-1 rounded-sm placeholder:text-light-gray text-cool-gray"
-                  placeholder="e.g. stephenking@lorem.com"
-                />
-              </fieldset>
-
-              <fieldset className="flex flex-col space-y-1">
-                <label className="text-sm text-marine-blue">Phone number</label>
-                <input
-                  className="border px-3 py-1 rounded-sm placeholder:text-light-gray text-cool-gray"
-                  placeholder="e.g. +351 999 000 111"
-                />
-              </fieldset>
+            <form className="space-y-2 mt-4">
+              <Input label="Name" />
+              <Input label="Email Address" />
+              <Input label="Phone Number" />
             </form>
           </div>
-        </div>
-
-        <div className="bg-white flex justify-end p-4">
-          <button className="text-white bg-marine-blue rounded-md py-3 px-4">
-            Next Step
-          </button>
         </div>
       </div>
     </div>
